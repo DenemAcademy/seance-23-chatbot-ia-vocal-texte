@@ -1,0 +1,574 @@
+# Séance 23 - Chatbot IA vocal + texte - transcription brute
+
+- Vidéo : `2026-06-05 16-40-51.mp4`
+- Durée détectée : 02:01:14
+- Langue : fr
+
+## Segments
+
+### 00:00:01 - 00:00:06
+ok bon top maintenant qu'on a fini le rag on va passer à la suite donc là on va
+
+### 00:00:06 - 00:00:13
+voir justement comment créer un chatbot vocal et un chatbot textuel pour notre
+
+### 00:00:13 - 00:00:21
+client donc le projet c'est qu'il voulait un chatbot sur son site web pour toute
+
+### 00:00:21 - 00:00:28
+la partie information recette menu etc donc pour ça ça va pas être très
+
+### 00:00:28 - 00:00:31
+complexe on a déjà créé notre rag le but ça va être de
+
+### 00:00:31 - 00:00:40
+connecter ce rag là à notre chatbot et créer une interface qui correspond justement du coup au
+
+### 00:00:40 - 00:00:49
+branding du restaurant. Pour ça on va faire ça on reprend le terminal où on a créé le rag et
+
+### 00:00:49 - 00:00:55
+ensuite ce qu'on va faire c'est qu'on va travailler avec le contexte qu'on a déjà créé sur notre
+
+### 00:00:55 - 00:01:02
+chatbot donc pour ça simplement continuer avec un système de prompting très simple
+
+### 00:01:02 - 00:01:10
+on va accompagner la demande pour qu'ensuite on a un résultat étape par étape donc pour
+
+### 00:01:10 - 00:02:25
+ça c'est simple on va lui dire ok maintenant qu'on a nos tags donc en gros ce que je lui
+
+### 00:02:25 - 00:02:33
+demande c'est qu'on a besoin de créer un chatbot textuel grâce à nos tags donc je lui
+
+### 00:02:33 - 00:02:37
+demande aussi de faire des recherches sur internet ça c'est très important
+
+### 00:02:37 - 00:02:41
+on va chaque fois appliquer la demande sur les recherches sur internet parce
+
+### 00:02:41 - 00:02:48
+qu'il ya la capacité d'aller feuilleter sur des liens, sur des forums, récupérer
+
+### 00:02:48 - 00:02:53
+les meilleures informations, les rassembler et ensuite récupérer du
+
+### 00:02:53 - 00:03:01
+contexte pour builder la solution récente possible parce que là c'est
+
+### 00:03:01 - 00:03:05
+c'est pour ça que derrière, il faut faire constamment cette demande
+
+### 00:03:05 - 00:03:10
+parce qu'un chatbot en 2025, la stratégie elle est bonne certes
+
+### 00:03:10 - 00:03:15
+mais ça se trouve en 2026, il y a encore une meilleure stratégie en 2027 aussi
+
+### 00:03:15 - 00:03:22
+alors voilà, le but c'est d'avoir, être à la pointe constamment des améliorations des systèmes IA
+
+### 00:03:22 - 00:03:27
+donc là il va aller directement sur la documentation d'OpenAI
+
+### 00:03:27 - 00:04:02
+regarder la partie de la structure simple HTML, puis ça s'appelle l'équipable ken
+
+### 00:04:02 - 00:04:46
+ce qui va créer le chatbot, ça va être en train de travailler
+
+### 00:04:46 - 00:04:50
+nous ensuite on ira créer une API
+
+### 00:04:50 - 00:04:57
+on va aller demander de créer une API, on aura juste à renseigner la clé
+
+### 00:04:57 - 00:04:59
+on aura une sécurité qui sera parfaite
+
+### 00:04:59 - 00:06:05
+on le laisse réfléchir, ensuite on fera un système de testing nous même
+
+### 00:06:05 - 00:06:07
+on peut ensuite trouver des sacs d'amélioration
+
+### 00:06:07 - 00:07:46
+on a la partie script, qu'on pourrait lui demander de le faire
+
+### 00:07:46 - 00:08:29
+on a le html, bon il est dégueulasse, il est pas très beau
+
+### 00:08:29 - 00:08:34
+et après on va le pousser directement sur un repos github
+
+### 00:08:34 - 00:08:38
+pour pas avoir un lien et le faire tester directement à notre client
+
+### 00:08:38 - 00:09:48
+donc là il est en train de faire une phase de test, on va le laisser travailler sur cette partie là
+
+### 00:09:48 - 00:11:08
+sur cette partie là. Bien sûr le design là c'est juste pour une partie test
+
+### 00:11:08 - 00:11:32
+même pas terrible parce que je peux pas écrire. Il a coupé ma demande
+
+### 00:11:32 - 00:11:41
+vu qu'il est en train de faire des tests en même temps. Donc là je vais couper
+
+### 00:11:41 - 00:12:57
+je vais dire ok je veux un design comme OpenAI quoi. J'utilisais aussi
+
+### 00:12:57 - 00:14:19
+parce que là comme on a pu le voir, il n'utilisait qu'un modèle, finisse
+
+### 00:14:19 - 00:14:23
+donc là il va faire lui, il va marquer du coulisse sur SRAG
+
+### 00:14:23 - 00:14:25
+après on va faire nous-mêmes les tests
+
+### 00:14:25 - 00:14:27
+pour voir un petit peu le résultat
+
+### 00:14:27 - 00:14:29
+on va laisser quand même faire un test
+
+### 00:14:29 - 00:15:46
+voir si derrière on remarque
+
+### 00:15:46 - 00:15:48
+il a bien compris que derrière nous on ne veut pas de GS2
+
+### 00:15:48 - 00:21:09
+il s'en fout le client
+
+### 00:21:09 - 00:21:11
+par exemple là moi j'aime pas le système de réponse par contre
+
+### 00:21:11 - 00:21:13
+oui d'après les informations disponibles
+
+### 00:21:13 - 00:21:15
+on a l'impression qu'il ne travaille pas
+
+### 00:21:15 - 00:21:17
+dans le restaurant
+
+### 00:21:17 - 00:26:04
+donc ça va être très simple
+
+### 00:26:04 - 00:29:59
+déjà finir la partie textuelle
+
+### 00:29:59 - 00:32:18
+HTML, CSS et Apple JS
+
+### 00:32:18 - 00:32:20
+le projet là on a commencé par le RAG
+
+### 00:32:20 - 00:32:26
+je vais commencer par le design du chatbot, enfin peu importe, moi j'aime bien commencer directement par la règle
+
+### 00:32:26 - 00:32:31
+ensuite on a créé le HTML, le design, après on a connecté l'API, Copenai
+
+### 00:32:31 - 00:36:00
+on ne voit pas, donc on coupe le play white, c'est pas normal
+
+### 00:36:00 - 00:36:08
+donc là il a cliqué, il va le voir, pas moi, je vais même lui dire
+
+### 00:36:08 - 00:37:13
+il est là mais je ne le vois pas encore, moi je ne comprends pas
+
+### 00:37:13 - 00:37:18
+là-bas je ne sais pas encore où changer, mais je pense que si
+
+### 00:37:18 - 00:47:31
+un système qui est assez complexe, on va le laisser travailler tranquillement, ne pas le
+
+### 00:47:31 - 00:47:36
+précipiter, ça ne sert à rien. Le but à chaque fois quand on construit quelque chose, c'est qu'il
+
+### 00:47:36 - 00:49:52
+se réfère à une documentation officielle. Là on va bien nous abisser en place, là il est en train
+
+### 00:49:52 - 00:49:56
+de préparer la documentation, nous on va faire des tests, pour essayer que derrière ce ne soit pas
+
+### 00:49:56 - 00:50:01
+fonctionnel d'un coup, que ce soit vrai. Donc on ira faire des sacs d'amélioration par la suite.
+
+### 00:50:01 - 00:51:11
+Est-ce que tu peux me donner, s'il te plait, le menu du jour ?
+
+### 00:51:11 - 00:51:26
+Aujourd'hui, en cuisine, le chef vous propose une carte qui évolue selon les produits de
+
+### 00:51:26 - 00:51:27
+saison.
+
+### 00:51:27 - 00:51:33
+Pour le menu d'égustation, il est disponible le soir, selon la saison, et à confirmer
+
+### 00:51:33 - 00:51:34
+par l'équipe.
+
+### 00:51:34 - 00:51:38
+Si vous voulez, je peux aussi vous présenter les options végétariennes de notre carte.
+
+### 00:51:38 - 00:51:46
+Yes, propose-moi les options végétariennes de la carte s'il te plaît pour voir un petit peu ce que vous proposez.
+
+### 00:51:46 - 00:52:00
+Aujourd'hui, en cuisine, le chef vous propose une option végétarienne, risotto végétal.
+
+### 00:52:00 - 00:52:06
+Et nous avons aussi un velouté de chantillon. Le risotto végétal est à 28 euros.
+
+### 00:52:06 - 00:52:13
+Pour toute adaptation ou allergie, pensez à le signaler à notre équipe afin de faire confirmer la commande.
+
+### 00:52:13 - 00:52:21
+Écoute, je te remercie et concernant les horaires d'ouverture, ça se passe comment chez vous s'il vous plaît ?
+
+### 00:52:21 - 00:52:39
+Bien sûr, nous sommes ouverts du lundi au samedi, midi et soir, et le dimanche midi uniquement.
+
+### 00:52:39 - 00:52:45
+Et tu n'as pas d'horaire ? C'est du lundi de quelle heure à quelle heure, le midi s'il te plaît ?
+
+### 00:52:45 - 00:52:55
+Le midi, nous sommes ouverts du lundi au samedi.
+
+### 00:52:55 - 00:53:00
+l'horaire exact d'ouverture et de fermeture le midi je préfère vous le
+
+### 00:53:00 - 00:53:07
+faire confirmer par l'équipe ok donc là notre système de réponse
+
+### 00:53:07 - 00:53:10
+paria vocale fonctionne bien il ya des petits points à améliorer par
+
+### 00:53:10 - 00:53:15
+exemple il ne donne pas l'horaire ça c'est pas à cause du système de
+
+### 00:53:15 - 00:53:18
+voicing c'est plus à cause du rag pourquoi le rag parce que ça se
+
+### 00:53:18 - 00:53:30
+trouve dans la partie documentation, on n'a pas de documents ou par oeuvre, celui ci
+
+### 00:53:30 - 00:53:39
+pourtant on a bien des horaires d'ouverture, donc là je vais copier la
+
+### 00:53:39 - 00:54:14
+conversation, je vais lui donner 6,8€ en terme de pricing, on va aller sur billing
+
+### 00:54:14 - 00:55:23
+donc là on lui a demandé des modifications pour la partie ouverture
+
+### 00:55:23 - 00:55:34
+c'est quelque chose de primordial pour tout restaurant, on va laisser du temps
+
+### 00:55:34 - 00:55:50
+il va améliorer la partie RAG avec du coup le MCP, on va peut-être lui demander d'améliorer
+
+### 00:55:50 - 00:55:56
+la vitesse de la voix, ça va être compliqué de créer une voice meilleure mais on peut en tout cas
+
+### 00:55:56 - 00:58:04
+parler plus vite. On va faire les tests, ensuite on refera une vocale pour voir si c'est fonctionnel
+
+### 00:58:04 - 00:58:11
+ou pas et après on poussera le tout directement sur kitup pour envoyer après au client la
+
+### 00:58:11 - 00:59:06
+bien. On va faire des tests. Ok, elle me dit ça. On va pouvoir le remonter là. Elle est pas très jolie, on va pouvoir le descendre.
+
+### 00:59:06 - 00:59:13
+Hello, j'espère que tu vas bien. Est-ce que tu peux me donner les horaires d'ouverture de lundi ? J'aimerais bien manger avec ma femme, s'il te plaît.
+
+### 00:59:13 - 00:59:30
+Bonjour, bien sûr. Le lundi, nous vous accueillons de 12h à 14h30 le midi, puis de 19h à 22h30 le soir.
+
+### 00:59:30 - 00:59:35
+Si vous souhaitez venir avec votre femme, je peux aussi vous aider pour une réservation.
+
+### 00:59:35 - 00:59:37
+Vous avez déjà la date et l'heure en tête ?
+
+### 00:59:37 - 01:01:03
+Allô, j'espère que tu vas bien.
+
+### 01:01:03 - 01:01:17
+Est-ce que tu peux me donner l'horaire d'ouverture du restaurant le lundi s'il te plaît ?
+
+### 01:01:17 - 01:01:22
+Le lundi, nous vous accueillons de 12h à 14h30, le midi, puis de 19h à 22h30,
+
+### 01:01:22 - 01:01:23
+le soir.
+
+### 01:01:23 - 01:01:26
+Dernière réservation du soir, 21h45.
+
+### 01:01:26 - 01:02:34
+Ok, top, ça va bien plus vite.
+
+### 01:02:34 - 01:02:35
+Excusez-moi.
+
+### 01:02:35 - 01:02:46
+Donc là on va le laisser terminer. Là ça va être un peu la version finale.
+
+### 01:02:46 - 01:02:55
+Après on pourra faire le petit mail en mode voilà l'OGNI j'ai fait une
+
+### 01:02:55 - 01:03:01
+petite V1, dis moi ce que t'en penses. J'attends surtout toi les axes
+
+### 01:03:01 - 01:03:05
+d'amélioration possibles. Comme ça derrière on arrive sur une V2 qui
+
+### 01:03:05 - 01:03:10
+correspond vraiment à tes intentes. Parce que si derrière on va builder du
+
+### 01:03:10 - 01:03:14
+coup toute une version finale on va perdre du temps et après comme je
+
+### 01:03:14 - 01:03:19
+vous l'ai dit la dernière fois, en fait c'est inutile parce que ça ne va pas
+
+### 01:03:19 - 01:03:44
+correspondre exactement à ça. Donc là on laisse travailler, on fait un petit peu le repos du coût public avec la page, comme ça après on aura le url, on fait les tests, ça fonctionne, on envoie au client par pas de temps.
+
+### 01:03:44 - 01:03:52
+Donc là, on voit l'espace de 3 heures à peu près, j'éleve en fonctionnel, je vais attendre les
+
+### 01:03:52 - 01:03:59
+retour client et ensuite du bout de la veineux ça n'apporte pas plus de 3 heures aussi donc
+
+### 01:03:59 - 01:04:02
+une bonne journée derrière vous avez fini un projet, sur le projet vous allez pouvoir
+
+### 01:04:02 - 01:04:11
+essayer peut-être à... ça dépend après honnêtement ça dépend en 2005, 3000 ça peut être ok
+
+### 01:04:11 - 01:04:38
+totalement. La Weebar c'est ma plus claire on va lui dire de mettre tout en public mais
+
+### 01:04:38 - 01:07:59
+selon vous publiez sur Netiflight directement. Ça qui est bien aussi c'est que là si vous
+
+### 01:07:59 - 01:08:06
+d'autres qui ont pu travailler le temps qu'ils fassent du coup le set avec l'optache
+
+### 01:08:06 - 01:10:50
+temps local pour voir si c'est fonctionnel et après il va pousser directement sur
+
+### 01:10:50 - 01:28:12
+pousser le repos donc ça va être bien tout terminé on va pouvoir passer à la phase de
+
+### 01:28:12 - 01:29:35
+test, voir si tout est fonctionnel, si tout marche. On va l'ouvrir en play white
+
+### 01:29:35 - 01:29:41
+on va laisser directement, on va pas lui demander de le faire
+
+### 01:29:41 - 01:29:47
+là encore une fois on voit pas le chatbot qu'il y a, ça c'est pas normal
+
+### 01:29:47 - 01:31:15
+Hello, est-ce que tu peux me dire le menu du soir, s'il te plaît, pour voir ce qu'on mange chez vous ?
+
+### 01:31:15 - 01:31:30
+Ce soir, en cuisine, le chef prépare le service du dîner, mais je n'ai pas le détail de la carte du soir dans les éléments que j'ai ici.
+
+### 01:31:30 - 01:31:33
+Je peux néanmoins vous aider tout de suite à préparer votre venue.
+
+### 01:31:33 - 01:31:38
+Si vous voulez, je peux aussi vous dire les horaires du service du soir, ou prendre les infos pour une réservation.
+
+### 01:31:38 - 01:31:44
+Non, moi j'ai besoin de savoir ce qu'on va manger ce soir, s'il te plaît. Est-ce que c'est possible d'avoir des informations sur le menu, ou pas du tout ?
+
+### 01:31:44 - 01:31:58
+pas du tout oui bien sûr ce soir nous sommes ouverts de 19 heures à 22h30 en
+
+### 01:31:58 - 01:32:02
+revanche je n'ai pas le détail du menu du soir ici aujourd'hui en cuisine le
+
+### 01:32:02 - 01:32:05
+chef peut faire évoluer la carte selon les produits de saison le plus simple
+
+### 01:32:05 - 01:32:08
+c'est de demander à l'équipe au moment de votre venue elle pourra vous
+
+### 01:32:08 - 01:32:10
+dire exactement ce qui est proposé ce soir
+
+### 01:32:10 - 01:32:54
+on lui laissez faire ses modifications il va repousser sur github et après on va lui
+
+### 01:32:54 - 01:33:00
+donner les informations pourquoi ça fonctionne pas justement parce qu'il
+
+### 01:33:00 - 01:33:03
+qu'il n'utilise pas tout le rigue puisqu'il a créé un système...
+
+### 01:33:03 - 01:33:10
+Mince, je l'ai fait sans faire exprès sur l'échappe.
+
+### 01:33:11 - 01:33:14
+Mais je pense en tout cas qu'il n'utilise pas tout le rigue parce que normalement
+
+### 01:33:14 - 01:34:01
+on peut pousser sur Versel et ensuite
+
+### 01:34:01 - 01:34:03
+on pourra faire des améliorations.
+
+### 01:34:03 - 01:34:06
+En tout cas, on est sur une version fidèle de la VR.
+
+### 01:34:06 - 01:34:10
+Et après bien sûr, on pourra encore une fois améliorer beaucoup d'objectifs
+
+### 01:34:10 - 01:34:13
+et encore une bonne nouvelle avec la globalité d'un projet
+
+### 01:34:13 - 01:35:00
+et ensuite améliorer sur ce que vous souhaitez, etc.
+
+### 01:35:00 - 01:35:06
+Ok, là on est en train de faire un play white, pour tester justement la partie Super Bay, donc le Trag.
+
+### 01:35:06 - 01:35:08
+Encore une fois, c'est un jeu d'amélioration.
+
+### 01:35:08 - 01:35:12
+Comme je vous l'ai dit, tout le monde de l'information, on part d'un point A.
+
+### 01:35:12 - 01:35:18
+On recherche ce qu'on souhaite, ensuite on fait une demande, après on a une réponse,
+
+### 01:35:18 - 01:35:21
+et après on est en train d'amélioration et on revient au point A.
+
+### 01:35:21 - 01:39:12
+Encore une fois, c'est une question de checks.
+
+### 01:39:12 - 01:39:23
+Le but c'est vraiment convider l'API de l'OTRAG à l'API de vos pénalités pour qu'ils arrivent à se livrer entre eux.
+
+### 01:39:23 - 01:55:30
+Ça crée GitHub et après, il faut pousser sur GitHub.
+
+### 01:55:30 - 01:55:32
+On va quand même faire des petits tests.
+
+### 01:55:32 - 01:55:47
+Est-ce que tu peux me donner le menu du soir s'il te plaît ?
+
+### 01:55:47 - 01:55:51
+En cuisine, le chef vous propose le menu dégustation le soir selon la saison.
+
+### 01:55:51 - 01:55:55
+Je peux aussi vous donner les horaires du service du soir si vous voulez.
+
+### 01:55:55 - 01:56:12
+Donne-moi les horaires du service du soir s'il te plait.
+
+### 01:56:12 - 01:56:15
+Le soir, nous vous accueillons de 19h à 23h30.
+
+### 01:56:15 - 01:56:19
+La dernière réservation est à 22h15 le vendredi.
+
+### 01:56:19 - 01:56:30
+Ok, top. Je te remercie et tu peux me donner aussi ce qu'on mange dans votre restaurant s'il te plait.
+
+### 01:56:30 - 01:56:34
+Bien sûr. Le soir, notre menu d'égustation est disponible selon la saison.
+
+### 01:56:34 - 01:56:36
+Et pour vous donner une idée de notre carte,
+
+### 01:56:36 - 01:56:44
+nous avons aussi une option végétarienne avec un risotto végétal et un velouté de champignon.
+
+### 01:56:44 - 01:58:22
+Le but c'est de lui donner le lien, qu'il teste et ensuite soit un retour par mail, soit vous organiser un petit code avec lui et vous en discuter directement.
+
+### 01:58:22 - 01:58:42
+Petit mail, on peut lui envoyer, là il vient de me le refaire.
+
+### 01:58:42 - 01:59:11
+Petit mail très simple, toutes les informations qu'on a mis sur la V1, la partie vocale, la partie textuelle, le petit widget, il peut cliquer sur le lien, il arrive du coup sur l'assistant IA.
+
+### 01:59:11 - 01:59:24
+J'espère que la séance elle vous a plu, c'était une séance qui est assez complexe,
+
+### 01:59:24 - 01:59:32
+pas forcément complexe mais plus longue, inflexion de la part du modèle Codex, donc on est
+
+### 01:59:32 - 01:59:36
+vraiment parti sur un système d'amélioration constamment avec une demande qui est très
+
+### 01:59:36 - 01:59:37
+simple.
+
+### 01:59:37 - 01:59:42
+Là je pourrais pas remonter tout en haut parce que je garde pas tout le coin en tout
+
+### 01:59:42 - 01:59:46
+cas.
+
+### 01:59:46 - 01:59:49
+Maintenant vous avez des compétences par rapport aux créations Narrag et dans
+
+### 01:59:49 - 01:59:57
+la prochaine séance du coup ça va être la plus complexe parce que là je vais
+
+### 01:59:57 - 01:59:59
+pas vous accompagner dessus ça va être vraiment un exercice à faire par vous
+
+### 01:59:59 - 02:00:04
+même qui va vous permettre de valider toutes les séances qu'on a fait
+
+### 02:00:04 - 02:00:08
+ensemble tout au long de la formation donc ça va vous prendre du temps le but
+
+### 02:00:08 - 02:00:13
+c'est que vous mettez en oeuvre tout ce que vous avez appris vous sortez un
+
+### 02:00:13 - 02:00:16
+projet qui permet de créer ce déblocage
+
+### 02:00:16 - 02:00:24
+j'ai compris comment on utilise un système d'IA et comment on l'utilise pour arriver
+
+### 02:00:24 - 02:00:31
+à un objectif sans que j'ai forcément les compétences adéquates par rapport à la problématique
+
+### 02:00:31 - 02:00:32
+de manges.
+
+### 02:00:32 - 02:00:36
+Je vous remercie et puis encore une fois si vous avez des questions n'hésitez pas
+
+### 02:00:36 - 02:00:41
+à me les envoyer sur Slack, je ferai un plaisir de vous y répondre peu importe la
+
+### 02:00:41 - 02:00:48
+problématique que vous rencontrez. Merci à tous d'avoir suivi toute la
+
+### 02:00:48 - 02:01:01
+formation. Je vous souhaite une bonne dernière séance, donc la 24, et vous allez
+
+### 02:01:01 - 02:01:13
+réussir dans ce milieu là constamment. Merci à vous.
