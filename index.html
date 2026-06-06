@@ -13,6 +13,8 @@
 @media(max-width:560px){.wrap,.hero-grid{padding-left:16px;padding-right:16px}.toc{grid-template-columns:1fr;padding-left:16px;padding-right:16px}.section-head,.opener-copy,.opener-side{padding:22px}.section-head p,.opener-copy p,.opener-side p,.hero p{font-size:16px}.checklist li{grid-template-columns:1fr}.media-card img{aspect-ratio:4/3}h1{font-size:clamp(38px,12vw,56px)}h2{font-size:clamp(28px,10vw,44px)}.section-counter{display:none}}
 </style>
 
+
+
 <style id="denem-act-system">
 :root {
   --denem-act-color: #059669;
@@ -139,6 +141,8 @@ body {
     </div>
   </div>
 </section>
+
+
 
 <div class="progress"><span id="progress"></span></div>
 <nav class="top"><div class="nav"><a class="brand" href="#top"><img src="logo-denem.jpeg" alt="Logo DENEM"><span><b>DENEM Academy</b><small>Seance 23 · Chatbot IA vocal + texte</small></span></a><div class="links"><a href="#section-01">Cadrer la V1</a><a href="#section-11">Brancher le RAG</a><a href="#section-21">Tester le texte</a><a href="#section-31">Passer au design client</a><a href="#section-41">Construire le widget</a><a href="#section-51">Ajouter la voix</a><a href="#section-61">Corriger le retrieval</a><a href="#section-71">Publier la V1</a></div></div></nav>
@@ -352,7 +356,6 @@ Ton :
 <section id="section-79" class="support-section tone-1 layout-compare"><div class="wrap"><div class="section-head reveal"><div class="meta"><span class="badge num">79</span><span class="badge label">Acte 8 · Publier la V1</span><span class="badge">Seance 23</span></div><h2>La suite est l&#x27;exercice final.</h2><p>Cette seance donne les pieces : RAG, chatbot, voix, design, publication. La prochaine etape consiste a tout refaire sur un projet choisi.</p></div><div class="before-after reveal"><div><span>Avant</span><p>Regarder la seance sans refaire ne cree pas la competence.</p></div><div><span>Apres</span><p>Tu peux expliquer comment atteindre un objectif sans tout coder toi-meme.</p></div></div><div class="command-box reveal"><span>Decision</span><p>Prepare ton propre cas client.</p></div></div></section>
 <section id="section-80" class="support-section tone-2 layout-opener"><div class="wrap"><div class="big-index">80</div><div class="opener-copy reveal"><div class="meta"><span class="badge num">80</span><span class="badge label">Acte 8 · Publier la V1</span><span class="badge redfill">Debut de bloc</span></div><h2>Fin de seance : je sais livrer une V1 IA.</h2><p>Le livrable final est un lien testable, un widget texte et vocal, un RAG connecte, des tests metier et une demande de retour client.</p></div><div class="opener-side reveal"><b>Refais la checklist complete avant d&#x27;envoyer.</b><p>Tu as une page active, des prompts copiables et une methode reutilisable.</p></div></div></section></main>
 <section class="resources"><div class="wrap"><div><span class="eyebrow">Ressources</span><h2>Fichiers utiles</h2><p>La transcription complete et les segments restent disponibles pour refaire la seance sans perdre les prises de parole.</p></div><div><a href="transcription/seance-23-chatbot-ia-vocal-texte-transcription.txt">Transcription brute TXT</a><a href="transcription/seance-23-chatbot-ia-vocal-texte-transcription.md">Transcription Markdown</a><a href="transcription/seance-23-chatbot-ia-vocal-texte-segments.json">Segments JSON</a><a href="transcription/seance-23-chatbot-ia-vocal-texte-moments-importants.md">Moments importants</a></div></div></section>
-<footer class="footer"><div class="wrap"><p>Seance 23 · DENEM Academy. Methode a retenir : partir du RAG, creer une V1 texte, tester, rapprocher le design du client, ajouter la voix seulement quand la base est stable, publier, puis demander un retour precis.</p></div></footer>
 <div class="section-counter" id="counter">01 / 80</div>
 <script>
 const progress=document.getElementById('progress');
@@ -365,6 +368,8 @@ const reveal=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry
 document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
 document.querySelectorAll('.prompt-panel').forEach(panel=>{const btn=panel.querySelector('.copy');const code=panel.querySelector('code');if(!btn||!code)return;btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.innerText);btn.textContent='Copie';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copier';btn.classList.remove('copied')},1300)}catch(e){btn.textContent='Selectionne';}});});
 </script>
+
+
 
 <section class="denem-sources-final" id="sources" aria-labelledby="sources-title">
   <div class="denem-sources-final__inner">
